@@ -1,0 +1,3 @@
+this is a basic todo application to use this u need to configure mysql database
+which in root directory tododatabase.sql file 
+simply import this in your mysql.

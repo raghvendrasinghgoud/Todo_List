@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+   font-family: 'Roboto Mono', monospace;
+}
+
+/* styling for header */
+header{
+    font-size: 10vh;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    padding: 10px;
+    margin-bottom: 5vh;
+    background-color: rgb(48, 43, 43);
+    color: rgb(33, 194, 33);
+}
+
+/* styling for form */
+form{
+    font-size: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+form textarea{
+    resize: none;
+    width: 30vw;
+    height: 30vh;
+    max-width: 500px;
+    max-height: 500px;
+}
+form textArea{
+    font-size: 20px;
+    color: black;
+}
+label{
+    font-weight: bold;
+}
+select{
+    width: 60px;
+}
+.item{
+    margin: 2vh;
+ }
+
+ /* styling for button */
+ .btn{
+    color: rgb(48, 43, 43);
+    font-size: large;
+    font-weight: bolder;
+    background-color: green;
+    border:0;
+    border-radius: 4px;
+    padding: 5px;
+ }
+ .btnTom{
+     background-color: Tomato;
+ }
+ /*styling for table*/
+ .container{
+     padding: 2%;
+ }
+ .container table{
+     width: 80%;
+     margin: auto;
+     font-size: 1.5rem;
+     
+    
+ }
+ .container table th{
+     background-color: rgb(34, 92, 186);
+ }
+ .container table td{
+     padding-left: 2px;
+     
+     background-color: rgb(153, 162, 176);
+ }
