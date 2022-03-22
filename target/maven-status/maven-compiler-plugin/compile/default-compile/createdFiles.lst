@@ -1,5 +1,6 @@
 com\todo\servlet\save.class
 com\todo\helper\Helper.class
+com\todo\servlet\deleteTask.class
 com\todo\helper\ConnectionProvider.class
 com\todo\entity\Task.class
 com\todo\dao\TasksDAO.class

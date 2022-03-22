@@ -11,6 +11,7 @@
             <th>Task name</th>
             <th>Remind Time</th>
             <th>Status</th>
+            <th>Delete</th>
         </tr>
 
 <%
@@ -35,6 +36,9 @@
                 }
             %>
             </td>
+<td>
+    <button style="background-color: blueviolet;" class="btn btnTom" onclick="mark('deleteTask?task_no=<%= t.getTaskNo() %>')" >Delete</button>
+</td>
         </tr>
     <%
     }

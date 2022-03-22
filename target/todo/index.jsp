@@ -26,43 +26,8 @@
         </div>
         <!-- javascript -->
         <script src="JS/todo.js"></script>
-        <script>
-            var id;
-            function sendData(){
-           
-                let req=new XMLHttpRequest();
-                let task=document.getElementById('task').value;
-                let hour=document.getElementById('hour').value;
-                let minute=document.getElementById('minute').value;
-                if(task===""){
-                    console.log("input data first then call send Data");
-                
-                }else{
-            req.open('GET',`sv?task=${task}&hour=${hour}&minute=${minute}`,true);
-                req.send();
-                document.getElementById('task').value="";
-                 id=setTimeout(()=>{ getTasksData(); },2000);
-                
-            }
-                
-            }
+        <script type="text/javascript">
             
-            function getTasksData(){
-                let req=new XMLHttpRequest();
-                console.log("we are in getdata");
-                req.open("GET",'showTasks.jsp',true);
-                req.send();
-                req.onreadystatechange=function(){
-                    if(req.readyState===4){
-                       console.log("we are in onreadystatechange");
-                       //console.log(req.responseText);
-                       document.getElementsByClassName('container')[0].innerHTML=req.responseText;
-                    }
-                };
-                clearTimeout(id);
-            }
-            console.log("getdata is called");
-            getTasksData();
             
         </script>
     </body>

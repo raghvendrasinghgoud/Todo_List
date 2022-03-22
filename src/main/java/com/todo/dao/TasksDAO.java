@@ -37,7 +37,6 @@ public class TasksDAO {
             String sql="select * from tasks order by task_no desc";
             PreparedStatement ps=conn.prepareStatement(sql);
             ResultSet res=ps.executeQuery();
-            res.next();
             while(res.next()){
                 Tasks.add(new Task(res.getInt("task_no"),res.getString("task_name"),new Time(res.getString("remind_time")),res.getBoolean("status")));
             }
@@ -60,6 +59,22 @@ public class TasksDAO {
         }catch(Exception e){
             e.printStackTrace();
         }
+        return flag;
+    }
+    
+    //Delete task
+    public boolean deleteTask(int task_no){
+        boolean flag=false;
+        try{
+            String sql="delete from tasks where task_no=?";
+            PreparedStatement ps=conn.prepareStatement(sql);
+            ps.setInt(1, task_no);
+            ps.executeUpdate();
+            flag=true;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        
         return flag;
     }
 }
